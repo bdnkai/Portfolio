@@ -10,7 +10,7 @@ export function Model(props) {
   return (
     <group {...props} dispose={null}>
       <group
-        position={[1383.89, 65.23, -96.28]}
+        position={[1383.89, 65, -96.28]}
         rotation={[-Math.PI / 2, 0, 1.57]}
         scale={[4.42, 4.26, 4.26]}
       >

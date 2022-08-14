@@ -1,0 +1,58 @@
+.navigation-container{
+   display: grid;
+   position: inherit;
+   height: 100%;
+   width: 100%;
+   grid-row: 9 / 20;
+   grid-column: 1 / 50;
+
+}
+.full_name{
+   display: flex;
+   position: initial;
+   justify-content: center;
+   align-self: center;
+   text-align: center;
+   height: 100%;
+   width: 100%;
+   grid-row: 13 /span 4;
+   grid-column: 1 / 49;
+   font-size: 350%;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 200;
+}
+
+.about_me_button, .portfolio_button, .resume_button, .contact_me_button{
+   font-size: 100%;
+   font-family: 'Poppins', sans-serif;
+   flex-wrap: nowrap;
+   position: unset;
+   justify-content: center;
+   align-self: center;
+   text-align: center;
+   cursor: pointer;
+   background-color: rgba(0, 0, 0, 0);
+   border-color: rgba(240, 248, 255, 0);
+   height: 100%;
+   width: 100%;
+}
+
+.about_me_button{
+   grid-row: 18/span 2;
+   grid-column: 13 / 19;
+}
+
+.portfolio_button{
+   grid-row: 18/span 2;
+   grid-column: 19/ 25;
+}
+
+.resume_button{
+   grid-row: 18/span 2;
+   grid-column: 25/ 31;
+}
+
+.contact_me_button{
+   grid-row: 18/span 2;
+   grid-column: 31/ 36;
+}
