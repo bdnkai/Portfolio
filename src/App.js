@@ -10,17 +10,21 @@ function App() {
   //------ Move this to correct component later ------//
   const ref = useRef()
   return (
+    <>
     <div className='component-container'>
       <Home/>
-      <Canvas className='three' shadows dpr={[1, 2]} camera={{position:[-100,50,100], fov: 85}}>
+    </div>
+    <div className='canvas-container'> 
+      <Canvas className='three' shadows dpr={[1, 2]} camera={{fov: 90}}>
         <Suspense fallback={null}>
-          <Stage controls={ref} preset="rembrandt" intensity={0.3}  environment="apartment" position={[0,-50,-50]}>
+          <Stage controls={ref} preset="rembrandt" intensity={0.3}  environment="apartment">
             <Model />
           </Stage>
         </Suspense>
         <OrbitControls ref={ref} />
       </Canvas>
     </div>
+    </>
   )
 }
 

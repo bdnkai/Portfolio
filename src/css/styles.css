@@ -6,23 +6,109 @@ body,
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(rgb(213, 234, 252),rgb(146, 201, 211));
-
+  background: linear-gradient(rgb(213, 234, 252),rgb(136, 147, 148));
 }
 
-.component-container{
+#root{
   display: grid;
+  background: linear-gradient(rgb(213, 234, 252),rgb(136, 147, 148));
+  grid-template-columns: repeat(99, 1fr);
+  grid-template-rows: repeat(99, 1fr);
+}
+.canvas-container{
+  position: absolute;
+  grid-column: 0/span  99;
+  grid-row: 0 /span 99;
   height: 100%;
   width: 100%;
-  grid-template-columns: repeat(49, 2fr);
-  grid-template-rows: repeat(49, 2fr);
+  background: linear-gradient(rgb(213, 234, 252),rgb(136, 147, 148));
+  opacity: .15;
 }
-.three{
-  grid-column: 1/ span 49;
-  grid-row: 1/ span 49;
+.component-container{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  grid-row: 25 / 35;
+  grid-column: 20 / 80;
+  min-width: 400px;
+  z-index: 100;
+}
+.navigation-container{
+  position: relative;
+  width: 100%;
+}
+
+.full_name{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgb(213, 234, 252),rgb(146, 201, 211));
-  opacity: .25;
+  font-size: 350%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
-        
+
+.button-container{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  height: 50px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.about_me_button, .portfolio_button, .resume_button, .contact_me_button{
+  font-size: 100%;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(240, 248, 255, 0);
+}
+.about_me_button:hover,
+.portfolio_button:hover,
+.resume_button:hover,
+.contact_me_button:hover {
+    flex-wrap: nowrap;
+    transition-duration: 25ms;
+    transition-delay: 25ms;
+    font-size: 115%;
+    font-weight: 400;
+}
+
+.about_me_button{
+  grid-row: 1 ;
+  grid-column: 1 /span 5;
+  border-right: rgba(56, 116, 93, 0.863);
+  border-left: rgba(56, 116, 93, 0.863);
+  border-style: ridge;
+}
+
+.portfolio_button{
+  grid-row: 1;
+  grid-column: 6/span 5;
+  border-right: rgba(56, 116, 93, 0.863);
+  border-style: ridge;
+}
+
+.resume_button{
+  grid-row: 1;
+  grid-column: 11/span 5;
+  border-right: rgb(56, 116, 93, 0.863);
+  border-style: ridge;
+}
+
+.contact_me_button{
+  grid-row: 1;
+  grid-column: 16/span 5;
+  border-right:rgba(56, 116, 93, 0.863);
+  border-style: ridge;
+}
