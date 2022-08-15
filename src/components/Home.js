@@ -1,11 +1,15 @@
 import {useReducer} from 'react'
-import {initialState, OPEN_ABOUT_ME, OPEN_CONTACT_INFO, OPEN_PORTFOLIO, OPEN_RESUME} from './reducers/useCases'
+import {initialState, OPEN_ABOUT_ME, OPEN_CONTACT_INFO, OPEN_PORTFOLIO, OPEN_RESUME, TOGGLE_DISPLAY} from './reducers/useCases'
 import myReducer from './reducers/myReducer'
 import AboutMe from './AboutMe'
+import ContactMe from './ContactMe'
+import Portfolio from './Portfolio'
+import Resume from './Resume'
 
 
 function Home() {
    const [state, dispatch] = useReducer(myReducer, initialState)
+   const {aboutMe, myPortfolio, myContactInfo, myResume} = state 
 
    const displayAboutMe = (event) =>{
       dispatch({
@@ -31,8 +35,14 @@ function Home() {
          payload: event
       });
    }
+   const toggleDisplay = (event) => {
+      dispatch({
+         type: TOGGLE_DISPLAY
+      })
+   }
 
   return (  
+   <div>
    <div className='navigation-container'>
       <div className='full_name'>
          BRANDON NGUYEN
@@ -50,6 +60,10 @@ function Home() {
          <button onClick={displayContactInfo} className='contact_me_button'>
             Contact Me
             </button>
+      </div>
+   </div>
+      <div className='display-container'>
+         {aboutMe ? <AboutMe/> : <div>{null}</div>}
       </div>
    </div>
   )

@@ -31,7 +31,7 @@ body,
   justify-content: center;
   grid-row: 25 / 35;
   grid-column: 20 / 80;
-  min-width: 400px;
+  min-width: 325px;
   z-index: 100;
 }
 .navigation-container{
@@ -80,14 +80,13 @@ body,
     flex-wrap: nowrap;
     transition-duration: 25ms;
     transition-delay: 25ms;
-    font-size: 115%;
+    font-size: 110%;
     font-weight: 400;
 }
 
 .about_me_button{
   grid-row: 1 ;
   grid-column: 1 /span 5;
-  border-right: rgba(56, 116, 93, 0.863);
   border-left: rgba(56, 116, 93, 0.863);
   border-style: ridge;
 }
@@ -96,14 +95,16 @@ body,
   grid-row: 1;
   grid-column: 6/span 5;
   border-right: rgba(56, 116, 93, 0.863);
+  border-left: rgba(56, 116, 93, 0.863);
   border-style: ridge;
 }
 
 .resume_button{
   grid-row: 1;
   grid-column: 11/span 5;
-  border-right: rgb(56, 116, 93, 0.863);
+  border-right: rgba(56, 116, 93, 0.863);
   border-style: ridge;
+
 }
 
 .contact_me_button{
@@ -111,4 +112,10 @@ body,
   grid-column: 16/span 5;
   border-right:rgba(56, 116, 93, 0.863);
   border-style: ridge;
+}
+
+.display-container{
+  height: 100%;
+  width: 100%;
+  grid-row: 50 / 80;
 }

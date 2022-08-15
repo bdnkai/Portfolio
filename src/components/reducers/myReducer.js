@@ -1,11 +1,17 @@
-import {OPEN_ABOUT_ME, OPEN_CONTACT_INFO, OPEN_PORTFOLIO, OPEN_RESUME} from './useCases'
+import {OPEN_ABOUT_ME, OPEN_CONTACT_INFO, OPEN_PORTFOLIO, OPEN_RESUME, TOGGLE_DISPLAY} from './useCases'
 
 function myReducer(state, action) {
   switch (action.type) {
+    case TOGGLE_DISPLAY:
+      return{
+        ...state,
+        displayOn: state.displayOn ? false : true
+      }
     case OPEN_ABOUT_ME:
       console.log('about me button is working')
       return{
         ...state,
+        displayOn: true,
         aboutMe: true,
         myPortfolio: false,
         myContactInfo: false,
@@ -15,6 +21,7 @@ function myReducer(state, action) {
       console.log('contact info button is working')
       return{
         ...state,
+        displayOn: true,
         aboutMe: false,
         myPortfolio: false,
         myContactInfo: true,
@@ -24,6 +31,7 @@ function myReducer(state, action) {
       console.log('portfolio button is working')
       return{
         ...state,
+        displayOn: true,
         aboutMe: false,
         myPortfolio: true,
         myContactInfo: false,
@@ -33,10 +41,15 @@ function myReducer(state, action) {
       console.log('resume button is working')
       return {
         ...state,
+        displayOn: true,
         aboutMe: false,
         myPortfolio: false,
         myContactInfo: false,
         myResume: true
+      }
+    case 'default':
+      return{
+        ...state
       }
   }
 
