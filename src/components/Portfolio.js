@@ -1,12 +1,8 @@
 import React from 'react'
 
 function Portfolio() {
-  return (
-    <div>
-      <h1>   
-         HI FROM Portfolio
-      </h1>
-   </div>
+  return (			
+    <div><h1>hello from portfolio</h1></div>
   )
 }
 

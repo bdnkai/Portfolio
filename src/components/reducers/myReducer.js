@@ -5,7 +5,11 @@ function myReducer(state, action) {
     case TOGGLE_DISPLAY:
       return{
         ...state,
-        displayOn: state.displayOn ? false : true
+        displayOn: false,
+        aboutMe: false,
+        myPortfolio: false,
+        myContactInfo: false,
+        myResume: false
       }
     case OPEN_ABOUT_ME:
       console.log('about me button is working')

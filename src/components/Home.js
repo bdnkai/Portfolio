@@ -5,11 +5,13 @@ import AboutMe from './AboutMe'
 import ContactMe from './ContactMe'
 import Portfolio from './Portfolio'
 import Resume from './Resume'
+import linkedIn from '../assets/LinkedIn.png'
+import gitHub from '../assets/GitHub.png'
 
 
 function Home() {
    const [state, dispatch] = useReducer(myReducer, initialState)
-   const {aboutMe, myPortfolio, myContactInfo, myResume} = state 
+   const {aboutMe, myPortfolio, myContactInfo, myResume, displayOn} = state 
 
    const displayAboutMe = (event) =>{
       dispatch({
@@ -35,7 +37,7 @@ function Home() {
          payload: event
       });
    }
-   const toggleDisplay = (event) => {
+   const closeDisplay = (event) => {
       dispatch({
          type: TOGGLE_DISPLAY
       })
@@ -60,10 +62,18 @@ function Home() {
          <button onClick={displayContactInfo} className='contact_me_button'>
             Contact Me
             </button>
+         {displayOn ? <button onClick={closeDisplay} className="hide_button">[ Close Me ]</button> : <>{null}</>}
       </div>
    </div>
       <div className='display-container'>
          {aboutMe ? <AboutMe/> : <div>{null}</div>}
+         {myPortfolio ? <Portfolio/> : <div>{null}</div>}
+         {myResume ? <Resume/> : <div>{null}</div>}
+         {myContactInfo ? <ContactMe/> : <div>{null}</div>}
+         {!displayOn ? <div className="icons">
+        <a href="https://www.linkedin.com/in/bdnii/"><img src={linkedIn} alt="" /></a>
+        <a href="https://github.com/bdnkai"><img src={gitHub} alt="" /></a> 
+      </div> : <div>{null}</div>}
       </div>
    </div>
   )

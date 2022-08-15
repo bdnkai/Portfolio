@@ -62,7 +62,7 @@ body,
   margin: auto;
 }
 
-.about_me_button, .portfolio_button, .resume_button, .contact_me_button{
+.about_me_button, .portfolio_button, .resume_button, .contact_me_button, .hide_button{
   font-size: 100%;
   font-family: 'Poppins', sans-serif;
   flex-wrap: nowrap;
@@ -114,8 +114,44 @@ body,
   border-style: ridge;
 }
 
-.display-container{
-  height: 100%;
+.hide_button{
+  background-color: rgba(33, 56, 77, 0);
+  grid-column: 7 / span 7;
+}
+
+.title{
+  font-size: 100%;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.AboutMe{
+  font-family: QuickSand;
+  display: block;
+  text-align: justify;
+  max-width: 600px;
   width: 100%;
-  grid-row: 50 / 80;
+  height: 100%;
+  font-size: 100%;
+  line-height: 125%;
+  padding-top: 2%;
+}
+.bonus{
+  justify-content: center;
+  font-weight: 500;
+}
+
+.icons{
+  display: inline-flex;
+  background-color: rgba(230, 63, 63, 0);
+  margin: auto;
+  padding-top: 10px;
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  height: 35px;
+  width: 35px;
 }
