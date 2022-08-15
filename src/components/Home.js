@@ -62,7 +62,7 @@ function Home() {
          <button onClick={displayContactInfo} className='contact_me_button'>
             Contact Me
             </button>
-         {displayOn ? <button onClick={closeDisplay} className="hide_button">[ Close Me ]</button> : <>{null}</>}
+         {displayOn ? <button onClick={closeDisplay} className="hide_button">[ Close Display ]</button> : <>{null}</>}
       </div>
    </div>
       <div className='display-container'>
@@ -70,10 +70,14 @@ function Home() {
          {myPortfolio ? <Portfolio/> : <div>{null}</div>}
          {myResume ? <Resume/> : <div>{null}</div>}
          {myContactInfo ? <ContactMe/> : <div>{null}</div>}
-         {!displayOn ? <div className="icons">
-        <a href="https://www.linkedin.com/in/bdnii/"><img src={linkedIn} alt="" /></a>
-        <a href="https://github.com/bdnkai"><img src={gitHub} alt="" /></a> 
-      </div> : <div>{null}</div>}
+         {!displayOn ? 
+            <div className="icons">
+               <a href="https://www.linkedin.com/in/bdnii/">
+                  <img src={linkedIn} alt="linkedin-icon" /></a>
+               <a href="https://github.com/bdnkai">
+                  <img src={gitHub} alt="github-icon" /></a> 
+               </div> 
+               : <div>{null}</div>}
       </div>
    </div>
   )
