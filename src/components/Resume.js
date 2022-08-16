@@ -7,7 +7,7 @@ function Resume() {
   return (
     <div> 
       <div className="resume">
-      <iframe
+      <embed
         className="resume"
         src={resumeDoc}
         type="application/pdf"
@@ -15,7 +15,7 @@ function Resume() {
         scrolling="auto"
         height={'100%'}
         width={'100%'}
-        ></iframe>
+        ></embed>
       </div>
       <div className="icons">
       <a href="https://www.linkedin.com/in/bdnii/"><img src={linkedIn} alt="" /></a>
