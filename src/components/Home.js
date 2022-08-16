@@ -70,14 +70,12 @@ function Home() {
          {myPortfolio ? <Portfolio/> : <div>{null}</div>}
          {myResume ? <Resume/> : <div>{null}</div>}
          {myContactInfo ? <ContactMe/> : <div>{null}</div>}
-         {!displayOn ? 
-            <div className="icons">
-               <a href="https://www.linkedin.com/in/bdnii/">
-                  <img src={linkedIn} alt="linkedin-icon" /></a>
-               <a href="https://github.com/bdnkai">
-                  <img src={gitHub} alt="github-icon" /></a> 
-               </div> 
-               : <div>{null}</div>}
+         {!displayOn ? <div className="icons">
+             <a href="https://www.linkedin.com/in/bdnii/">
+                <img src={linkedIn} alt="linkedin-icon" /></a>
+             <a href="https://github.com/bdnkai">
+                <img src={gitHub} alt="github-icon" /></a>
+            </div> : <div>{null}</div>}
       </div>
    </div>
   )
