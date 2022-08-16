@@ -12,7 +12,6 @@ function myReducer(state, action) {
         myResume: false
       }
     case OPEN_ABOUT_ME:
-      console.log('about me button is working')
       return{
         ...state,
         displayOn: true,
@@ -22,7 +21,6 @@ function myReducer(state, action) {
         myResume: false
       }
     case OPEN_CONTACT_INFO:
-      console.log('contact info button is working')
       return{
         ...state,
         displayOn: true,
@@ -32,7 +30,6 @@ function myReducer(state, action) {
         myResume: false
       }
     case OPEN_PORTFOLIO:
-      console.log('portfolio button is working')
       return{
         ...state,
         displayOn: true,
@@ -42,7 +39,6 @@ function myReducer(state, action) {
         myResume: false
       }
     case OPEN_RESUME:
-      console.log('resume button is working')
       return {
         ...state,
         displayOn: true,

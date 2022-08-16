@@ -1,12 +1,9 @@
 import { useState } from 'react'
 import linkedIn from '../assets/LinkedIn.png'
 import gitHub from '../assets/GitHub.png'
-
-
 import '../css/form.css'
 
 function ContactMe() {
-
   const initialState = {
     name: "",
     email: "",

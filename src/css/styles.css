@@ -6,12 +6,12 @@ body,
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(rgb(213, 234, 252),rgb(136, 147, 148));
+  background: linear-gradient(rgb(213, 234, 252),rgb(187, 193, 194));
 }
 
 #root{
   display: grid;
-  background: linear-gradient(rgb(213, 234, 252),rgb(136, 147, 148));
+  background: linear-gradient(rgb(213, 234, 252),rgb(187, 193, 194));
   grid-template-columns: repeat(99, 1fr);
   grid-template-rows: repeat(99, 1fr);
 }
@@ -21,7 +21,7 @@ body,
   grid-row: 0 /span 99;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgb(213, 234, 252),rgb(136, 147, 148));
+  background: linear-gradient(rgb(213, 234, 252),rgb(187, 193, 194));
   opacity: .15;
 }
 .component-container{
@@ -72,6 +72,9 @@ body,
   align-self: center;
   text-align: center;
   cursor: pointer;
+  height: 100%;
+  width: 100%;
+  border-radius: 1px;
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(240, 248, 255, 0);
 }
@@ -96,32 +99,34 @@ body,
 .about_me_button{
   grid-row: 1 ;
   grid-column: 1 /span 5;
-  border-left: rgb(157, 194, 142);
+  border-left: rgb(135, 165, 144);
   border-style: ridge;
 }
 
 .portfolio_button{
   grid-row: 1;
   grid-column: 6/span 5;
-  border-right: rgba(157, 194, 142);
-  border-left: rgba(157, 194, 142);
+  border-right: rgba(65, 68, 64, 0.781);
+  border-left: rgb(135, 165, 144);
   border-style: ridge;
 }
 
 .resume_button{
   grid-row: 1;
   grid-column: 11/span 5;
-  border-right: rgba(157, 194, 142);
+  border-right: rgba(135, 165, 144);
+  border-left: rgba(65, 68, 64, 0.781);
   border-style: ridge;
+  margin-left: 5px;
 
 }
 
 .contact_me_button{
   grid-row: 1;
   grid-column: 16/span 5;
-  border-right:rgb(157, 194, 142);
+  border-right:rgb(135, 165, 144);
   border-style: ridge;
-  padding-left: 10px;
+  padding-left: 10%;
 }
 
 .hide_button{

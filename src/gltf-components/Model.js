@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 export function Model(props) {
   const { nodes, materials } = useGLTF("/FullHouseRender.gltf");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[0,0,100]} rotation={[-Math.PI / 2, -1.575, -1.65]}>
       <group
         position={[1383.89, 65, -96.28]}
         rotation={[-Math.PI / 2, 0, 1.57]}
