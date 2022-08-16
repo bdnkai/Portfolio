@@ -51,10 +51,6 @@ function myReducer(state, action) {
         myContactInfo: false,
         myResume: true
       }
-    case 'default':
-      return{
-        ...state
-      }
   }
 
 

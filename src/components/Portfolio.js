@@ -4,11 +4,9 @@ import gitHub from '../assets/GitHub.png'
 import Gitz from '../assets/Gitz.png'
 import BlackJack from '../assets/BlackJack.png'
 import MyHolo from '../assets/MyHolo.png'
-import Space from '../assets/space.png'
 import '../css/portfolio.css'
 
 function Portfolio() {
-
   return (			
     <div className="portfolio-container">
       <div className="box-container">
